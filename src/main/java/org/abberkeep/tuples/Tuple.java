@@ -60,16 +60,6 @@ public class Tuple<A, B, C, D, E, F, G, H, I, J> implements Iterable<Object> {
    private J j;
 
    /**
-    * Creates a Tuple with one element.
-    * @param a
-    */
-   public Tuple(A a) {
-      this.a = a;
-      size = 1;
-      tupleAdd = (TupleAdd<B>) (B b1) -> new Tuple(a, b1);
-   }
-
-   /**
     * Creates a Tuple with two elements.
     * @param a
     * @param b

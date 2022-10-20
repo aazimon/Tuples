@@ -62,35 +62,6 @@ public class TupleTest {
    }
 
    @Test
-   public void testSingle() {
-      Tuple underTest = new Tuple<>(VALUE1);
-      int id = 1;
-
-      assertEquals(id, underTest.size());
-
-      Iterator<Object> iter = underTest.iterator();
-
-      testIteration(iter, VALUE1);
-      assertFalse(iter.hasNext());
-      assertEquals(VALUE1, underTest.get0());
-      assertEquals(VALUE1, underTest.get(id - 1));
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get1());
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get2());
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get3());
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get4());
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get5());
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get6());
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get7());
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get8());
-      assertThrows(UnsupportedOperationException.class, () -> underTest.get9());
-      testGetElement(underTest, id);
-
-      Tuple underTest2 = underTest.add().element(VALUE2);
-
-      assertEquals(id + 1, underTest2.size());
-   }
-
-   @Test
    public void testPair() {
       Tuple underTest = new Tuple<>(VALUE1, VALUE2);
       int id = 2;
