@@ -6,6 +6,31 @@
    <version>1.0</version>
    <packaging>jar</packaging>
 
+   <description>Simple Java library for tuples in Java.</description>
+
+   <licenses>
+      <license>
+         <name>The Apache Software License, Version 2.0</name>
+         <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+         <distribution>repo</distribution>
+      </license>
+   </licenses>
+
+   <organization>
+      <name>Abber Keep</name>
+      <url>http://www.abberkeep.us</url>
+   </organization>
+
+   <developers>
+      <developer>
+         <id>aazimon</id>
+         <name>Gary Deken</name>
+         <roles>
+            <role>Project admin</role>
+         </roles>
+      </developer>
+   </developers>
+
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <maven.compiler.source>14</maven.compiler.source>
@@ -20,4 +45,45 @@
          <scope>test</scope>
       </dependency>
    </dependencies>
+
+   <build>
+      <resources>
+         <resource>
+            <directory>src/main/resources</directory>
+         </resource>
+         <resource>
+            <directory>.</directory>
+            <targetPath>META-INF</targetPath>
+            <includes>
+               <include>LICENSE.md</include>
+            </includes>
+         </resource>
+      </resources>
+
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+               <source>14</source>
+               <target>14</target>
+            </configuration>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.1.2</version>
+            <executions>
+               <execution>
+                  <phase>package</phase>
+                  <goals>
+                     <goal>jar</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+
 </project>

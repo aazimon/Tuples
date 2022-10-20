@@ -27,7 +27,7 @@ package org.abberkeep.tuples;
  * immutable. The value is mutable, but must be the same type of was constructed.</p>
  *
  * Copyright (c) Oct 16, 2022
- * @author Gary Deken <gary@abberkeep.us>
+ * @author Gary Deken
  * @version 1.0
  * @param <String>
  * @param <A>

@@ -39,7 +39,7 @@ import org.junit.jupiter.api.Test;
  *
  * Copyright: Copyright (c) Oct 8, 2022
  *
- * @author Gary Deken <gary@abberkeep.us>
+ * @author Gary Deken
  * @version 1.0
  */
 public class TupleTest {

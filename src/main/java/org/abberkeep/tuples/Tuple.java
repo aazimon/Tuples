@@ -31,7 +31,7 @@ import java.util.NoSuchElementException;
  * the containing objects can be changed.</p>
  *
  * Copyright (c) Oct 8, 2022
- * @author Gary Deken <gary@abberkeep.us>
+ * @author Gary Deken
  * @version 1.0
  * @param <A>
  * @param <B>

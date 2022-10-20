@@ -27,7 +27,7 @@ package org.abberkeep.tuples;
  * Tuple.</p>
  *
  * Copyright (c) Oct 16, 2022
- * @author Gary Deken <gary@abberkeep.us>
+ * @author Gary Deken
  * @version 1.0
  * @param <T> Object type to be added to a Tuple.
  */
