@@ -58,6 +58,7 @@ public class Tuple<A, B, C, D, E, F, G, H, I, J> implements Iterable<Object> {
    private H h;
    private I i;
    private J j;
+   private TupleGet t;
 
    /**
     * Creates a Tuple with two elements.
@@ -69,6 +70,7 @@ public class Tuple<A, B, C, D, E, F, G, H, I, J> implements Iterable<Object> {
       this.b = b;
       size = 2;
       tupleAdd = (TupleAdd<C>) (C c1) -> new Tuple(a, b, c1);
+      t = new Pair();
    }
 
    /**
@@ -250,6 +252,10 @@ public class Tuple<A, B, C, D, E, F, G, H, I, J> implements Iterable<Object> {
       return tupleAdd;
    }
 
+   public TupleGet get() {
+      return t;
+   }
+
    /**
     * Returns the Ith element in this Tuple. If i is outside the range of this Tuple it will throw in
     * IllegalArgumentException.
@@ -382,7 +388,7 @@ public class Tuple<A, B, C, D, E, F, G, H, I, J> implements Iterable<Object> {
 
       @Override
       public boolean hasNext() {
-         return cursor != size;
+         return cursor < size;
       }
 
       @Override
@@ -396,6 +402,20 @@ public class Tuple<A, B, C, D, E, F, G, H, I, J> implements Iterable<Object> {
          return ret;
       }
 
+   }
+
+   public class TupleGet {
+
+   }
+
+   public class Pair extends TupleGet {
+      public A e0() {
+         return a;
+      }
+
+      public B e1() {
+         return b;
+      }
    }
 
 }

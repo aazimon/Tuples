@@ -3,7 +3,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.abberkeep</groupId>
    <artifactId>Tuples</artifactId>
-   <version>1.0</version>
+   <version>1.2</version>
    <packaging>jar</packaging>
 
    <description>Simple Java library for tuples in Java.</description>
@@ -30,6 +30,24 @@
          </roles>
       </developer>
    </developers>
+
+   <repositories>
+      <repository>
+         <id>central</id>
+         <!--url>https://repo1.maven.org/maven2/</url-->
+         <url>http://localhost:8080/artifactory/libs-release</url>
+         <snapshots>
+            <enabled>false</enabled>
+         </snapshots>
+      </repository>
+      <repository>
+         <id>snapshots</id>
+         <url>http://localhost:8080/artifactory/libs-snapshot</url>
+         <releases>
+            <enabled>false</enabled>
+         </releases>
+      </repository>
+   </repositories>
 
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
